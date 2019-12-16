@@ -74,9 +74,9 @@
         <td class="td-status">
           <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>
         <td class="td-manage">
-          <a onclick="member_stop(this,{{ $v->user_id }})" href="javascript:;" status="{{ $v->status }}"  title="启用">
-            <i class="layui-icon">&#xe601;</i>
-          </a>
+{{--          <a onclick="member_stop(this,{{ $v->user_id }})" href="javascript:;" status="{{ $v->status }}"  title="启用">--}}
+{{--            <i class="layui-icon">&#xe601;</i>--}}
+{{--          </a>--}}
           <a  href="{{ url('admin/user/auth/'.$v->user_id) }}"   title="授权">
             <i class="layui-icon">&#xe631;</i>
           </a>

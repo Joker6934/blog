@@ -170,7 +170,6 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
-
         return view('admin.user.edit',compact('user'));
     }
 
@@ -195,12 +194,12 @@ class UserController extends Controller
         if($res){
             $data = [
                 'status'=>0,
-                'message'=>'修改成功'
+                'message'=>'修改成功!'
             ];
         }else{
             $data = [
                 'status'=>1,
-                'message'=>'修改失败'
+                'message'=>'修改失败!'
             ];
         }
         return $data;
