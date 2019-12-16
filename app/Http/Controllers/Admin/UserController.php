@@ -170,6 +170,7 @@ class UserController extends Controller
     public function edit($id)
     {
         $user = User::find($id);
+
         return view('admin.user.edit',compact('user'));
     }
 
@@ -186,20 +187,17 @@ class UserController extends Controller
         $user = User::find($id);
 //        2. 获取要修改成的用户名
         $username = $request->input('user_name');
-
         $user->user_name = $username;
-
         $res = $user->save();
-
         if($res){
             $data = [
                 'status'=>0,
-                'message'=>'修改成功!'
+                'message'=>'修改成功'
             ];
         }else{
             $data = [
                 'status'=>1,
-                'message'=>'修改失败!'
+                'message'=>'修改失败'
             ];
         }
         return $data;
@@ -218,12 +216,12 @@ class UserController extends Controller
         if($res){
             $data = [
                 'status'=>0,
-                'message'=>'修改成功'
+                'message'=>'删除成功!'
             ];
         }else{
             $data = [
                 'status'=>1,
-                'message'=>'修改失败'
+                'message'=>'删除失败!'
             ];
         }
         return $data;
@@ -239,12 +237,12 @@ class UserController extends Controller
         if($res){
             $data = [
                 'status'=>0,
-                'message'=>'删除成功'
+                'message'=>'删除所有用户成功！'
             ];
         }else{
             $data = [
                 'status'=>1,
-                'message'=>'删除失败'
+                'message'=>'删除所有用户失败！'
             ];
         }
         return $data;

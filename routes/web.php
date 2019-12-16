@@ -22,6 +22,6 @@ Route::group(['prefix'=>'admin','namespace'=>'Admin','middleware'=>'IsLogin'],fu
     Route::get('welcome','LoginController@welcome');
 //后台退出登录路由
     Route::get('logout','LoginController@logout');
-    //后台用户模块相关路由
+//后台用户模块相关路由
     Route::resource('user','UserController');
 });
